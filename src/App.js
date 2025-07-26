@@ -1,11 +1,12 @@
-import logo from './logo.svg';
-import './App.css';
-
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import MyDrawer from "./pages/MyDrawer";
 function App() {
   return (
-    <div className="App">
-      salah Dridi
-    </div>
+    <Router>
+      <div className="App">
+     <MyDrawer/>
+     </div>
+    </Router>
   );
 }
 
