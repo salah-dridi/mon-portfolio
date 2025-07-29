@@ -15,7 +15,7 @@ function Typewriter({ text, speed = 100 }) {
   }, [text, speed]);
 
   return (
-    <p style={{ color: '#183912ff' }}>
+    <p style={{ color: '#66cee5ff' }}>
       {displayedText}
     </p>
   );

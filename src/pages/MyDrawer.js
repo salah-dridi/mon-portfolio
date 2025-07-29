@@ -39,6 +39,15 @@ export default function MyDrawer() {
     setSelectedIndex(index);
     setOpen(false);
   };
+  const [visible, setVisible] = React.useState(true);
+
+React.useEffect(() => {
+  const interval = setInterval(() => {
+    setVisible((prev) => !prev);
+  }, 600); //8ms
+
+  return () => clearInterval(interval);
+}, []);
 
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column', height: '100vh' }}>
@@ -63,17 +72,26 @@ export default function MyDrawer() {
         }}
       >
        
-        <Box sx={{ fontWeight: 'bold', fontSize: '1.25rem' }}>
-               <Name />
-        </Box>
+      <Box
+  sx={{
+    fontWeight: 'bold',
+    fontSize: '1.25rem',
+    opacity: visible ? 1 : 0,
+    transition: 'opacity 0.4s ease-in-out',
+  }}
+>
+ {liste[selectedIndex].text}
+</Box>
+
 
        
         <IconButton
           onClick={() => setOpen(true)}
-          sx={{ color: 'white' }}
+          sx={{ color: 'white',flexDirection:'column',fontSize:15 }}
           aria-label="menu"
         >
           <MenuIcon />
+          Menu
         </IconButton>
       </Box>
 
