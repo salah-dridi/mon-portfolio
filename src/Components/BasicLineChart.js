@@ -4,7 +4,7 @@ import { Typography, Box } from '@mui/material';
 
 export default function BasicLineChart() {
   return (
-    <Box sx={{ width: 300, borderRadius: 2, p: 2 ,background:'linear-gradient(to bottom, #001, #4db2b6)'}}>
+    <Box sx={{ width: 300, borderRadius: 2 ,background:'linear-gradient(to bottom, #001, #4db2b6)'}}>
       <Typography
         variant="h6"
         align="center"

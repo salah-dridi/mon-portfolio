@@ -1,6 +1,7 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react'; 
 import homeparagraphe1 from '../Data/HomeParagraphe';
 import BasicLineChart from '../Components/BasicLineChart';
+import PieActiveArc from '../Components/PieActiveArc';
 
 function Typewriter({ text, speed = 100 }) {
   const [displayedText, setDisplayedText] = useState('');
@@ -43,11 +44,9 @@ function Home() {
         flexDirection: 'column',
       }}
     >
-     
       <div
         style={{
-          minHeight: 400, 
-         
+          minHeight: 300,
           overflow: 'hidden',
           marginBottom: 20,
         }}
@@ -55,7 +54,21 @@ function Home() {
         <Typewriter text={homeparagraphe1} speed={70} />
       </div>
 
-      <BasicLineChart />
+     <div 
+  style={{ 
+    display: 'flex', 
+    flexDirection: 'row', 
+    gap: '20px', 
+    flexWrap: 'wrap', 
+    justifyContent: 'center',
+    width: 'fit-content',
+    margin: '0 auto' 
+  }}
+>
+  <BasicLineChart />
+  <PieActiveArc />
+</div>
+
     </div>
   );
 }
