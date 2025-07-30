@@ -1,9 +1,17 @@
 import * as React from 'react';
 import { PieChart } from '@mui/x-charts/PieChart';
 import { desktopOS,valueFormatter} from './webUsageStats';
-
+import { Typography, Box } from '@mui/material';
 export default function PieActiveArc() {
   return (
+     <Box sx={{ width: 300}}>
+          <Typography
+            variant="h6"
+            align="center"
+            sx={{ mb: 1, color: 'black' }} 
+          >
+            Utilisation des langages de programmation en pourcentage
+          </Typography>
     <PieChart
       series={[
         {
@@ -15,7 +23,7 @@ export default function PieActiveArc() {
       ]}
       height={200}
       width={200}
-      sx={{ borderRadius: 2 ,background:'linear-gradient(to bottom, #001, #4db2b6)'}}
     />
+    </Box>
   );
 }

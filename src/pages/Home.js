@@ -2,8 +2,9 @@ import { useState, useEffect } from 'react';
 import homeparagraphe1 from '../Data/HomeParagraphe';
 import BasicLineChart from '../Components/BasicLineChart';
 import PieActiveArc from '../Components/PieActiveArc';
+import InternetDataGrowthChart from '../Components/InternetDataGrowthChart';
 
-function Typewriter({ text, speed = 100 }) {
+function Typewriter({ text, speed = 1000 }) {
   const [displayedText, setDisplayedText] = useState('');
 
   useEffect(() => {
@@ -20,7 +21,7 @@ function Typewriter({ text, speed = 100 }) {
   const lines = displayedText.split('\n');
 
   return (
-    <p style={{ color: '#66cee5ff', whiteSpace: 'pre-wrap', margin: 0 }}>
+    <p style={{ color: '#373B44', whiteSpace: 'pre-wrap', margin: 0 }}>
       {lines.map((line, index) => (
         <span key={index}>
           {line}
@@ -36,7 +37,7 @@ function Home() {
     <div
       style={{
         minHeight: '100vh',
-        backgroundColor: 'black',
+       background:'linear-gradient(to right, #ADA996, #F2F2F2,#DBDBDB,#EAEAEA)',
         fontSize: '17px',
         fontFamily: 'monospace',
         padding: 10,
@@ -67,6 +68,7 @@ function Home() {
 >
   <BasicLineChart />
   <PieActiveArc />
+  <InternetDataGrowthChart/>
 </div>
 
     </div>

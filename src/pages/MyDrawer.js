@@ -14,7 +14,6 @@ import IconButton from '@mui/material/IconButton';
 import CallIcon from '@mui/icons-material/Call';
 import MenuIcon from '@mui/icons-material/Menu';
 import Home from './Home';
-import Name from '../Components/Name';
 import About from './About';
 import Projects from './Projects';
 import Contact from './Contact';
@@ -57,7 +56,7 @@ React.useEffect(() => {
       <Box
         sx={{
           height: `${headerHeight}px`,
-          background: 'linear-gradient(to bottom, #001, #4db2b6)',
+          background: 'linear-gradient(to right, #001, #4db2b6)',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'space-between',
